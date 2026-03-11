@@ -44,7 +44,7 @@ This example can be adapted for different robot manipulators by modifying the fo
 # Citation and Usage
 If this code, or any modified version of it, is used in academic publications, the original paper must be properly cited.
 The full paper can be viewed here:
-DOI: [Insert DOI here]
+DOI: https://doi.org/10.1016/j.birob.2026.100322 
 
 # Final Note
 This repository is intended to complement the paper by providing a clear and reproducible reference implementation. Readers are strongly encouraged to consult the paper for theoretical background, algorithmic details, and advanced implementations beyond the basic inverse kinematics formulation.
