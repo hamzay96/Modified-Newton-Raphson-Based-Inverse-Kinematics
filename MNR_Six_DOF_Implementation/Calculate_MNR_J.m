@@ -1,5 +1,4 @@
-clc
-clear all
+clc; clear;
 
 % =========================================================================
 % Example: Symbolic Computation of the Modified Jacobian for a 6-DOF Robot
