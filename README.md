@@ -23,13 +23,12 @@ The implementation is designed as a reference example rather than a fully optimi
 # Order of the Files to Run
 1. Calculate_MNR_J.m
 	Used to symbolically derive the modified Jacobian Jn for the robot.
-	Running this file generates a text file (MNR_Jn.txt) containing the symbolic expressions of Jn.
-2. MNR_Jn.m
+	Running this file generates a text file (MNR_Jn.txt) containing the symbolic expressions of Jn, MATLAB ready Jacobian and numerical Forward Kinematics (no Matrix Multiplication) Functions and CPP ready Jacobian and FK functions. 
+2. MNR_Jn_.m
 	A numerical MATLAB function that evaluates Jn.
-	Copy the expressions from MNR_Jn.txt into this file.
 	This function takes joint angles as input and outputs the modified Jacobian.
-3. Six_DOF_FK.m
-   Forward kinematics function of the robot. Users must replace this file with their own robot’s FK if a different structure is used.
+3. MNR_FK_.m
+   Auto generated forward kinematics function based on the robot DH parameters in Calculate_MNR_J.m
 4. Single_Point_IK.m and IK_with_EEF_Trajectory.m
    Demonstrates MNR-based inverse kinematics along a linear end-effector trajectory.
    
