@@ -2,7 +2,9 @@
 % Generate MATLAB Forward Kinematics function automatically
 % -------------------------------------------------------------------------
 
-fileName = 'MNR_FK_.m';
+folderName = 'MATLAB_Implementation';
+
+fileName = fullfile(folderName, 'MNR_FK_.m');
 
 fid = fopen(fileName, 'w');
 

@@ -2,9 +2,12 @@
 % Generate C++ Jacobian Source File Automatically
 % -------------------------------------------------------------------------
 
-fileName = 'MNR_J.cpp';
+folderName = 'CPP_Implementation';
+
+fileName = fullfile(folderName, 'MNR_J.cpp');
 
 fid = fopen(fileName, 'w');
+
 
 %% ------------------------------------------------------------------------
 % C++ Headers

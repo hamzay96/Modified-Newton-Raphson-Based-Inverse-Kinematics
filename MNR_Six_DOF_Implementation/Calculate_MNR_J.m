@@ -163,40 +163,11 @@ Jn_sym = FP_Removing(tol, Jn_sym);
 T_ee   = FP_Removing(tol, T_ee);
 
 disp('Jacobian is calculated')
+
 %% ------------------------------------------------------------------------
 % Saving the Jacobian to a text file
 % -------------------------------------------------------------------------
 % Each Jacobian element is written as a symbolic expression in text form.
-%
-% The generated file (NewJ.txt) can be directly copied into a MATLAB
-% function (e.g., MNR_J.m), where joint angles are provided as inputs and
-% the Jacobian Jn is numerically evaluated.
-
-fid = fopen('MNR_Jn.txt','w');
-
-for i = 1:size(Jn_sym,1)
-    for j = 1:size(Jn_sym,2)
-        % Access symbolic expression from cell
-        % exprSym = Jn{i,j};
-        exprSym = Jn_sym(i,j);
-        
-        % Generate a variable name (e.g., J0102)
-        varName = sprintf('J%02d%02d', i, j);
-        
-        % Convert symbolic expression to string
-        exprStr = char(exprSym);
-        
-        % Remove unnecessary line breaks and extra spaces
-        exprStr = regexprep(exprStr, '\s+', ' ');
-        
-        % Write to file
-        fprintf(fid, '%s = %s;\n', varName, exprStr);
-    end
-end
-
-fclose(fid);
-
-disp('Jacobian Expression is Saved in .txt file')
 
 %% ------------------------------------------------------------------------
 % Making Ready to Use MATLAB and CPP functions

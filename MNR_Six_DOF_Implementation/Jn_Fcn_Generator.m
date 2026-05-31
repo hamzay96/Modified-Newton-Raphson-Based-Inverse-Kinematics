@@ -2,9 +2,12 @@
 % Generate MATLAB Jacobian function automatically
 % -------------------------------------------------------------------------
 
-fileName = 'MNR_Jn_.m';
+folderName = 'MATLAB_Implementation';
+
+fileName = fullfile(folderName, 'MNR_Jn_.m');
 
 fid = fopen(fileName, 'w');
+
 
 %% Function header
 fprintf(fid, 'function J = MNR_Jn_(Theta)\n\n');
