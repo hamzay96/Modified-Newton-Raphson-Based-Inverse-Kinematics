@@ -23,14 +23,18 @@ The implementation is designed as a reference example rather than a fully optimi
 # Order of the Files to Run
 1. Calculate_MNR_J.m
 	Used to symbolically derive the modified Jacobian Jn for the robot.
-	Running this file generates a text file (MNR_Jn.txt) containing the symbolic expressions of Jn, MATLAB ready Jacobian and numerical Forward Kinematics (no Matrix Multiplication) Functions and CPP ready Jacobian and FK functions. 
-2. MNR_Jn_.m
+	Running this file generates MATLAB ready Jacobian and numerical Forward Kinematics (no Matrix Multiplication) Functions and CPP ready Jacobian and FK functions. 
+2. Single_Point_IK.m and IK_with_EEF_Trajectory.m (Inside MATLAB_Implementation)
+   Demonstrates MNR-based inverse kinematics along a linear end-effector trajectory in MATLAB code.
+3. Single_Point_IK.cpp and IK_with_EEF_Trajectory.cpp (Inside CPP_Implementation)
+   Demonstrates MNR-based inverse kinematics along a linear end-effector trajectory in CPP code.
+
+Functions to remember
+*. MNR_Jn_.m or MNR_Jn.cpp
 	A numerical MATLAB function that evaluates Jn.
 	This function takes joint angles as input and outputs the modified Jacobian.
-3. MNR_FK_.m
-   Auto generated forward kinematics function based on the robot DH parameters in Calculate_MNR_J.m
-4. Single_Point_IK.m and IK_with_EEF_Trajectory.m
-   Demonstrates MNR-based inverse kinematics along a linear end-effector trajectory.
+*. MNR_FK_.m or MNR_FK.cpp
+   Auto-generated forward kinematics function based on the robot DH parameters in Calculate_MNR_J.m
    
 # Limitations of the Current Example
 The complete paper presents additional features such as joint limit avoidance, weighted least-norm solutions, clamping strategies, and task prioritization. These components are not included in the current example in order to keep the implementation simple and focused on the inverse kinematics formulation.
